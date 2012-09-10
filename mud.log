@@ -1,13 +1,13 @@
-20120910.1452.43  Info  main           marblemud v5.7.7
-20120910.1452.43  Info  main           (C) 2000-2012 Bo Zimmerman
-20120910.1452.43  Info  main           http://www.marblemud.org
-20120910.1452.44  Info  HOST0          Disabled subsystems: COMMAND_POSE
-20120910.1452.44  Info  MUD@5555       MUD Server started on port: 5555
-20120910.1452.44  Error HOST0          Fatal error: DBCONNECTIONS in INI file is 0
-20120910.1452.44  Info  Thread-0       New Connections are now closed
-20120910.1452.44  Info  Thread-0       All users saved.
-20120910.1452.44  Info  Thread-0       Stats saved.
-20120910.1452.44  Info  Thread-0       Notifying all objects of shutdown...
+20120910.1439.06  Info  main           marblemud v5.7.7
+20120910.1439.06  Info  main           (C) 2000-2012 Bo Zimmerman
+20120910.1439.06  Info  main           http://www.marblemud.org
+20120910.1439.06  Info  HOST0          Disabled subsystems: COMMAND_POSE
+20120910.1439.06  Info  MUD@5555       MUD Server started on port: 5555
+20120910.1439.07  Error HOST0          Fatal error: DBCONNECTIONS in INI file is 0
+20120910.1439.07  Info  Thread-0       New Connections are now closed
+20120910.1439.07  Info  Thread-0       All users saved.
+20120910.1439.07  Info  Thread-0       Stats saved.
+20120910.1439.07  Info  Thread-0       Notifying all objects of shutdown...
 Exception in thread "Thread-0" java.lang.NullPointerException
 	at com.planet_ink.marble_mud.core.CMClass.getMsg(CMClass.java:2277)
 	at com.planet_ink.marble_mud.application.MUD.globalShutdown(MUD.java:739)
