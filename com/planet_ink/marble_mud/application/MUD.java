@@ -1379,9 +1379,9 @@ public class MUD extends Thread implements MudHost
 		while(!bringDown)
 		{
 			System.out.println();
-			Log.sysOut(Thread.currentThread().getName(),"marblemud v"+HOST_VERSION_MAJOR + "." + HOST_VERSION_MINOR);
-			Log.sysOut(Thread.currentThread().getName(),"(C) 2000-2012 Bo Zimmerman");
-			Log.sysOut(Thread.currentThread().getName(),"http://www.marblemud.org");
+			Log.sysOut(Thread.currentThread().getName(),"Marble MUD v"+HOST_VERSION_MAJOR + "." + HOST_VERSION_MINOR);
+			Log.sysOut(Thread.currentThread().getName(),"(C) 2012 Ben Cherrington");
+			Log.sysOut(Thread.currentThread().getName(),"http://www.Cocanuta.com");
 			HostGroup joinable=null;
 			CMLib.hosts().clear();
 			for(int i=0;i<iniFiles.size();i++)
