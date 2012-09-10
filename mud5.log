@@ -1,0 +1,14 @@
+20120910.1601.12  Info  main           Marble MUD v0.1.0
+20120910.1601.12  Info  main           (C) 2012 Ben Cherrington
+20120910.1601.12  Info  main           http://www.Cocanuta.com
+20120910.1601.12  Info  HOST0          Disabled subsystems: COMMAND_POSE
+20120910.1601.12  Info  MUD@5555       MUD Server started on port: 5555
+20120910.1601.13  Error HOST0          Fatal error: DBCONNECTIONS in INI file is 0
+20120910.1601.13  Info  Thread-0       New Connections are now closed
+20120910.1601.13  Info  Thread-0       All users saved.
+20120910.1601.13  Info  Thread-0       Stats saved.
+20120910.1601.13  Info  Thread-0       Notifying all objects of shutdown...
+Exception in thread "Thread-0" java.lang.NullPointerException
+	at com.planet_ink.marble_mud.core.CMClass.getMsg(CMClass.java:2277)
+	at com.planet_ink.marble_mud.application.MUD.globalShutdown(MUD.java:739)
+	at com.planet_ink.marble_mud.application.MUD$HostGroup$1.run(MUD.java:1275)
