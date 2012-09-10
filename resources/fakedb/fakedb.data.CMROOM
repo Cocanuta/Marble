@@ -1,7 +1,56 @@
--
+*
 START
 StdRoom
 New Area
 New Room 
 Brand new database room! You need to change this text with the MODIFY ROOM command.  If your character is not an Archon, pick up the book you see here and read it immediately! 
+<IMG /><BEHAVES /><AFFECS /> 
+*
+START
+WoodRoom
+New Area
+New Room 
+Brand new database room! You need to change this text with the MODIFY ROOM command.  If your character is not an Archon, pick up the book you see here and read it immediately! 
+<IMG /><BEHAVES /><AFFECS /> 
+*
+START
+Plains
+New Area
+Starting Room 
+Brand new database room! You need to change this text with the MODIFY ROOM command.  If your character is not an Archon, pick up the book you see here and read it immediately! 
+<IMG /><BEHAVES /><AFFECS /> 
+*
+START
+StdRoom
+New Area
+Cabbin 
+Brand new database room! You need to change this text with the MODIFY ROOM command.  If your character is not an Archon, pick up the book you see here and read it immediately! 
+<IMG /><BEHAVES /><AFFECS /> 
+*
+START
+WoodRoom
+New Area
+Cabbin 
+Brand new database room! You need to change this text with the MODIFY ROOM command.  If your character is not an Archon, pick up the book you see here and read it immediately! 
+<IMG /><BEHAVES /><AFFECS /> 
+-
+START
+WoodRoom
+New Area
+Cabbin 
+The air feels warm around you as the fire on the east wall roars away. To the north there is a window and to the west a door. It looks dark outside. 
+<IMG /><BEHAVES /><AFFECS /> 
+*
+New Area#0
+Woods
+New Area
+Woods-New Area#0 
+ 
+<IMG /><BEHAVES /><AFFECS /> 
+-
+New Area#0
+Woods
+New Area
+Dark Woods 
+The ground is frozen solid with a light layer of frost stretching out before you. Huge trees tower above you blocking out any source of light and forming a corridoor of trunks to the north. 
 <IMG /><BEHAVES /><AFFECS /> 

@@ -1,14 +1,80 @@
-20120910.1627.48  Info  main           Marble MUD v0.1.0
-20120910.1627.48  Info  main           (C) 2012 Ben Cherrington
-20120910.1627.48  Info  main           http://www.Cocanuta.com
-20120910.1627.48  Info  HOST0          Disabled subsystems: COMMAND_POSE
-20120910.1627.48  Info  MUD@5555       MUD Server started on port: 5555
-20120910.1627.49  Error HOST0          Fatal error: DBCONNECTIONS in INI file is 0
-20120910.1627.49  Info  Thread-0       New Connections are now closed
-20120910.1627.49  Info  Thread-0       All users saved.
-20120910.1627.49  Info  Thread-0       Stats saved.
-20120910.1627.49  Info  Thread-0       Notifying all objects of shutdown...
-Exception in thread "Thread-0" java.lang.NullPointerException
-	at com.planet_ink.marble_mud.core.CMClass.getMsg(CMClass.java:2277)
-	at com.planet_ink.marble_mud.application.MUD.globalShutdown(MUD.java:739)
-	at com.planet_ink.marble_mud.application.MUD$HostGroup$1.run(MUD.java:1275)
+20120910.1651.16  Info  main           Marble MUD v0.1.0
+20120910.1651.16  Info  main           (C) 2012 Ben Cherrington
+20120910.1651.16  Info  main           http://www.Cocanuta.com
+20120910.1651.16  Info  HOST0          Disabled subsystems: COMMAND_POSE
+20120910.1651.16  Info  MUD@5555       MUD Server started on port: 5555
+20120910.1651.16  Info  HOST0          Connected to jdbc:fakedb:resources/fakedb
+20120910.1651.16  Error HTTPserver     Unable to load common.ini!
+20120910.1651.16  Error HTTPpub        ERROR: required parameter missing: DEFAULTFILE
+20120910.1651.16  Error HTTPserver     Unable to load common.ini!
+20120910.1651.16  Error HTTPadmin      ERROR: required parameter missing: DEFAULTFILE
+20120910.1651.16  Error SMTPserver     Unable to load common.ini!
+20120910.1651.16  Info  SMTP           Player mail box system is disabled.
+20120910.1651.16  Error SMTP@5555      Address already in use: JVM_Bind
+20120910.1651.17  Info  HOST0          WebMacros loaded  : 164
+20120910.1651.18  Info  HOST0          Races loaded      : 166
+20120910.1651.18  Info  HOST0          Classes loaded    : 48
+20120910.1651.18  Info  HOST0          MOB Types loaded  : 103
+20120910.1651.18  Info  HOST0          Exit Types loaded : 26
+20120910.1651.18  Info  HOST0          Area Types loaded : 9
+20120910.1651.18  Info  HOST0          Locales loaded    : 93
+20120910.1651.19  Info  HOST0          Fighter Skills    : 113
+20120910.1651.19  Info  HOST0          Chants loaded     : 248
+20120910.1651.19  Info  HOST0          Languages loaded  : 19
+20120910.1651.20  Info  HOST0          Properties loaded : 212
+20120910.1651.20  Info  HOST0          Prayers loaded    : 241
+20120910.1651.21  Info  HOST0          Skills loaded     : 253
+20120910.1651.21  Info  HOST0          Songs loaded      : 140
+20120910.1651.21  Info  HOST0          Spells loaded     : 339
+20120910.1651.21  Info  HOST0          Heroics loaded    : 6
+20120910.1651.21  Info  HOST0          Traps loaded      : 68
+20120910.1651.22  Info  HOST0          Basic Items loaded: 94
+20120910.1651.22  Info  HOST0          Weapons loaded    : 57
+20120910.1651.22  Info  HOST0          Armor loaded      : 47
+20120910.1651.22  Info  HOST0          Magic Items loaded: 40
+20120910.1651.22  Info  HOST0          Clan Items loaded : 19
+20120910.1651.22  Info  HOST0          Electronics loaded: 12
+20120910.1651.22  Info  HOST0          Behaviors loaded  : 94
+20120910.1651.23  Info  HOST0          Commands loaded   : 259
+20120910.1651.25  Info  HOST0          Expertises defined: 1428
+20120910.1651.25  Info  HOST0          Channels loaded   : 20
+20120910.1651.25  Info  HOST0          Socials loaded    : 308
+20120910.1651.25  Info  HOST0          Clans loaded      : 0
+20120910.1651.25  Error CM1Server0     failed to load /web/cm1.ini
+20120910.1651.25  Info  I3Server       InterMud3 Core (c)1996 George Reese
+20120910.1651.25  Info  Intermud3      I3 client connection: 204.209.44.3@8080
+20120910.1651.25  Info  I3Server       InterMud3 Server started on port 27766
+20120910.1651.25  Info  HOST0          Loading catalog...
+20120910.1651.25  Info  HOST0          Loading map...
+20120910.1651.25  Info  HOST0          Preparing map...
+20120910.1651.25  Info  HOST0          Mapped rooms      : 0 in 0 areas
+20120910.1651.25  Info  UNKN           NO MAPPED ROOM?!  I'll make ya one!
+20120910.1651.25  Info  HOST0          Utility threads started
+20120910.1651.25  Info  HOST0          Initialization complete.
+20120910.1651.55  Info  Sess0#1        Connection from 78.148.12.42
+20120910.1652.19  Info  FrontDoor      Creating user: Cocanuta
+20120910.1652.41  Info  FrontDoor      Created user: Cocanuta
+20120910.1652.41  Info  Session        78.148.12.42 ALCLIENT ANSI, login: Cocanuta
+20120910.1658.47  Info  Rooms          Cocanuta modified room START.
+20120910.1700.53  Info  Rooms          Cocanuta created room New Area#0.
+20120910.1701.51  Info  Exits          START exits changed by Cocanuta.
+20120910.1705.02  Info  Rooms          Cocanuta modified room New Area#0.
+20120910.1706.00  Info  Sess0#3        Connection from 78.148.12.42
+20120910.1706.17  Info  FrontDoor      Creating user: Ben
+20120910.1706.39  Info  FrontDoor      Created user: Ben
+20120910.1706.40  Info  Session        78.148.12.42 ALCLIENT ANSI, login: Ben
+20120910.1720.39  Info  Items          Cocanuta created item StdCoins.
+20120910.1720.45  Info  Items          Cocanuta created item StdCoins.
+20120910.1726.35  Info  Mobs           Cocanuta created mob a citizen.
+20120910.1727.34  Info  Mobs           Cocanuta destroyed mob a citizen.
+20120910.1727.58  Info  Mobs           Cocanuta created mob A Standard MOB.
+20120910.1728.24  Info  CMGenEditor    Cocanuta edited user Ben
+20120910.1729.50  Info  CMGenEditor    Cocanuta edited user Cocanuta
+20120910.1730.24  Info  Mobs           Cocanuta destroyed mob A Standard MOB.
+20120910.1740.42  Info  Mobs           Cocanuta created mob Robert.
+20120910.1746.01  Info  Sess0#5        Connection from 79.77.108.179
+20120910.1746.49  Info  FrontDoor      Creating user: Engolus
+20120910.1747.46  Info  FrontDoor      Created user: Engolus
+20120910.1747.46  Info  Session        79.77.108.179 XTERM ANSI, login: Engolus
+20120910.1755.07  Info  CMGenEditor    Cocanuta edited user Engolus
+20120910.1756.25  Info  Items          Cocanuta created item ManualArchon.

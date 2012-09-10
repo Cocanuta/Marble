@@ -1,0 +1,66 @@
+*
+START
+0
+StdOpenDoorway
+
+New Area#0
+*
+New Area#0
+1
+StdOpenDoorway
+
+START
+*
+START
+0
+Door
+
+New Area#0
+*
+New Area#0
+4
+StdOpenDoorway
+
+ 
+*
+New Area#0
+1
+Door
+
+START
+*
+New Area#0
+4
+StdOpenDoorway
+
+ 
+*
+New Area#0
+1
+Door
+
+START
+-
+New Area#0
+4
+StdOpenDoorway
+
+ 
+-
+New Area#0
+1
+Door
+
+START
+*
+START
+0
+Door
+
+New Area#0
+-
+START
+0
+Door
+
+New Area#0
