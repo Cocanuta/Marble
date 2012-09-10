@@ -2,12 +2,11 @@ package com.planet_ink.fakedb;
 import java.sql.*;
 import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.Executor;
 import java.lang.ref.WeakReference;
 
 /* 
-   Copyright 2012 Ben Cherrington
-
+   Copyright 2001 Thomas Neumann
+   Copyright 2009-2012 Bo Zimmerman
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -357,36 +356,6 @@ public class Connection implements java.sql.Connection
    { 
 	   return null; 
    }
-
-@Override
-public void abort(Executor arg0) throws SQLException {
-	// TODO Auto-generated method stub
-	
-}
-
-@Override
-public int getNetworkTimeout() throws SQLException {
-	// TODO Auto-generated method stub
-	return 0;
-}
-
-@Override
-public String getSchema() throws SQLException {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-@Override
-public void setNetworkTimeout(Executor arg0, int arg1) throws SQLException {
-	// TODO Auto-generated method stub
-	
-}
-
-@Override
-public void setSchema(String arg0) throws SQLException {
-	// TODO Auto-generated method stub
-	
-}
 
    // JDK 1.4 stuff
 /*

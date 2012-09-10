@@ -8,8 +8,8 @@ import com.planet_ink.fakedb.Backend.ComparableValue;
 import com.planet_ink.fakedb.Backend.FakeTable;
 
 /* 
-   Copyright 2012 Ben Cherrington
-
+   Copyright 2001 Thomas Neumann
+   Copyright 2009-2012 Bo Zimmerman
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -754,17 +754,5 @@ public class Statement implements java.sql.Statement
    public int getResultSetType() throws java.sql.SQLException { return 0; }
    
    public java.sql.ResultSet getGeneratedKeys() throws java.sql.SQLException { return null; }
-
-@Override
-public void closeOnCompletion() throws SQLException {
-	// TODO Auto-generated method stub
-	
-}
-
-@Override
-public boolean isCloseOnCompletion() throws SQLException {
-	// TODO Auto-generated method stub
-	return false;
-}
 
 }

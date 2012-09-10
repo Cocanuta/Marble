@@ -54,7 +54,7 @@ public class DBUpgrade
 	
 	public static void main(String a[]) throws IOException
 	{
-		pl("Welcome to the marblemud Database Upgrade Tool!");
+		pl("Welcome to the CoffeeMud Database Upgrade Tool!");
 		pl("(C) 2003-2012 Bo Zimmerman");
 		pl("Another product of ...Planet Ink!");
 		pl("");
@@ -63,7 +63,7 @@ public class DBUpgrade
 		while(oldTables.size()==0)
 		{
 			pl("Enter the path to the 'fakedb.schema' file");
-			pl("for the **OLD** version of marblemud.");
+			pl("for the **OLD** version of CoffeeMud.");
 			pl("It doesn't matter whether you are or are not using FakeDB.");
 			p(":");
 			String oldfakedbfile=in.readLine().trim();
@@ -144,7 +144,7 @@ public class DBUpgrade
 		while(newTables.size()==0)
 		{
 			pl("Enter the path to the 'fakedb.schema' file");
-			pl("for the **NEW** version of marblemud.");
+			pl("for the **NEW** version of CoffeeMud.");
 			pl("It doesn't matter whether you are or are not using FakeDB.");
 			p(":");
 			String newfakedbfile=in.readLine().trim();
@@ -281,7 +281,7 @@ public class DBUpgrade
 			{
 				pl("Enter the driver class for your *OLD* database.");
 				pl("If you've forgotten what it is, you'll find it ");
-				pl("as the DBCLASS entry in your old marblemud.ini file.");
+				pl("as the DBCLASS entry in your old coffeemud.ini file.");
 				p(":");
 				sclass=in.readLine();
 				if(sclass.trim().length()==0)
@@ -352,10 +352,10 @@ public class DBUpgrade
 			{
 				pl("Enter the database service for your *OLD* database.");
 				pl("If you've forgotten what it is, you'll find it ");
-				pl("as the DBSERVICE entry in your old marblemud.ini file, ");
+				pl("as the DBSERVICE entry in your old coffeemud.ini file, ");
 				pl("minus all the extraneous backslashes (\\).  For instance, if");
-				pl("your INI file says the service is: jdbc\\:mysql\\://localhost\\:3306/marblemud");
-				pl("you would enter it here as: jdbc:mysql://localhost:3306/marblemud");
+				pl("your INI file says the service is: jdbc\\:mysql\\://localhost\\:3306/coffeemud");
+				pl("you would enter it here as: jdbc:mysql://localhost:3306/coffeemud");
 				p(":");
 				sservice=in.readLine();
 				if(sservice.trim().length()==0)
@@ -418,7 +418,7 @@ public class DBUpgrade
 			{
 				pl("Enter the driver class for your *NEW* database.");
 				pl("If you've forgotten what it is, you'll find it ");
-				pl("as the DBCLASS entry in your new marblemud.ini file.");
+				pl("as the DBCLASS entry in your new coffeemud.ini file.");
 				p(":");
 				dclass=in.readLine();
 				if(dclass.trim().length()==0)
@@ -489,10 +489,10 @@ public class DBUpgrade
 			{
 				pl("Enter the database service for your *NEW* database.");
 				pl("If you've forgotten what it is, you'll find it ");
-				pl("as the DBSERVICE entry for your new marblemud.ini file, ");
+				pl("as the DBSERVICE entry for your new coffeemud.ini file, ");
 				pl("minus all the extraneous backslashes (\\).  For instance, if");
-				pl("your INI file will say the service is: jdbc\\:mysql\\://localhost\\:3306/marblemud");
-				pl("you would enter it here as: jdbc:mysql://localhost:3306/marblemud");
+				pl("your INI file will say the service is: jdbc\\:mysql\\://localhost\\:3306/coffeemud");
+				pl("you would enter it here as: jdbc:mysql://localhost:3306/coffeemud");
 				p(":");
 				dservice=in.readLine().trim();
 				if(dservice.trim().length()==0)

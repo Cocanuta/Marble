@@ -1,12 +1,10 @@
 package com.planet_ink.fakedb;
 
-import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 /* 
-   Copyright 2012 Ben Cherrington
-
+   Copyright 2001 Thomas Neumann
+   Copyright 2009-2012 Bo Zimmerman
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -89,10 +87,4 @@ public class Driver implements java.sql.Driver
 
 	  return result;
    }
-
-@Override
-public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-	// TODO Auto-generated method stub
-	return null;
-}
 }
