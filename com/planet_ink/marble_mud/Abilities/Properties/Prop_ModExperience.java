@@ -1,0 +1,128 @@
+package com.planet_ink.marble_mud.Abilities.Properties;
+import com.planet_ink.marble_mud.core.interfaces.*;
+import com.planet_ink.marble_mud.core.*;
+import com.planet_ink.marble_mud.core.collections.*;
+import com.planet_ink.marble_mud.Abilities.interfaces.*;
+import com.planet_ink.marble_mud.Areas.interfaces.*;
+import com.planet_ink.marble_mud.Behaviors.interfaces.*;
+import com.planet_ink.marble_mud.CharClasses.interfaces.*;
+import com.planet_ink.marble_mud.Commands.interfaces.*;
+import com.planet_ink.marble_mud.Common.interfaces.*;
+import com.planet_ink.marble_mud.Exits.interfaces.*;
+import com.planet_ink.marble_mud.Items.interfaces.*;
+import com.planet_ink.marble_mud.Libraries.interfaces.MaskingLibrary;
+import com.planet_ink.marble_mud.Locales.interfaces.*;
+import com.planet_ink.marble_mud.MOBS.interfaces.*;
+import com.planet_ink.marble_mud.Races.interfaces.*;
+
+
+import java.util.*;
+
+/* 
+
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+	   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+public class Prop_ModExperience extends Property
+{
+	public String ID() { return "Prop_ModExperience"; }
+	public String name(){ return "Modifying Experience Gained";}
+	protected int canAffectCode(){return Ability.CAN_MOBS|Ability.CAN_ITEMS|Ability.CAN_AREAS|Ability.CAN_ROOMS;}
+	protected String operationFormula = "";
+	protected LinkedList<CMath.CompiledOperation> operation = null;
+	protected MaskingLibrary.CompiledZapperMask   mask = null;
+
+	public String accountForYourself()
+	{ return "Modifies experience gained: "+operationFormula;	}
+
+
+	public int translateAmount(int amount, String val)
+	{
+		if(amount<0) amount=-amount;
+		if(val.endsWith("%"))
+			return (int)Math.round(CMath.mul(amount,CMath.div(CMath.s_int(val.substring(0,val.length()-1)),100)));
+		return CMath.s_int(val);
+	}
+
+	public String translateNumber(String val)
+	{
+		if(val.endsWith("%"))
+			return "@x1 * (" + val.substring(0,val.length()-1) + " / 100)";
+		return Integer.toString(CMath.s_int(val));
+	}
+	
+	public void setMiscText(String newText)
+	{
+		super.setMiscText(newText);
+		operation = null;
+		mask=null;
+		String s=newText.trim();
+		int x=s.indexOf(';');
+		if(x>=0)
+		{
+			mask=CMLib.masking().getPreCompiledMask(s.substring(x+1).trim());
+			s=s.substring(0,x).trim();
+		}
+		operationFormula="Amount "+s;
+		if(s.startsWith("="))
+			operation = CMath.compileMathExpression(translateNumber(s.substring(1)).trim());
+		else
+		if(s.startsWith("+"))
+			operation = CMath.compileMathExpression("@x1 + "+translateNumber(s.substring(1)).trim());
+		else
+		if(s.startsWith("-"))
+			operation = CMath.compileMathExpression("@x1 - "+translateNumber(s.substring(1)).trim());
+		else
+		if(s.startsWith("*"))
+			operation = CMath.compileMathExpression("@x1 * "+translateNumber(s.substring(1)).trim());
+		else
+		if(s.startsWith("/"))
+			operation = CMath.compileMathExpression("@x1 / "+translateNumber(s.substring(1)).trim());
+		else
+		if(s.startsWith("(")&&(s.endsWith(")")))
+		{
+			operationFormula="Amount ="+s;
+			operation = CMath.compileMathExpression(s);
+		}
+		else
+			operation = CMath.compileMathExpression(translateNumber(s.trim()));
+		operationFormula=CMStrings.replaceAll(operationFormula, "@x1", "Amount");
+	}
+	
+	public boolean okMessage(final Environmental myHost, final CMMsg msg)
+	{
+		if((msg.sourceMinor()==CMMsg.TYP_EXPCHANGE)
+		&&(operation != null)
+		&&(((msg.target()==affected)&&(affected instanceof MOB))
+		   ||((affected instanceof Item)
+			   &&(msg.source()==((Item)affected).owner())
+			   &&(!((Item)affected).amWearingAt(Wearable.IN_INVENTORY)))
+		   ||(affected instanceof Room)
+		   ||(affected instanceof Area)))
+		{
+			if(mask!=null)
+			{
+				if(affected instanceof Item)
+				{
+					if((msg.target()==null)||(!(msg.target() instanceof MOB))||(!CMLib.masking().maskCheck(mask,msg.target(),true)))
+						return super.okMessage(myHost,msg);
+				}
+				else
+				if(!CMLib.masking().maskCheck(mask,msg.source(),true))
+					return super.okMessage(myHost,msg);
+			}
+			msg.setValue((int)Math.round(CMath.parseMathExpression(operation, new double[]{msg.value()}, 0.0)));
+		}
+		return super.okMessage(myHost,msg);
+	}
+}
