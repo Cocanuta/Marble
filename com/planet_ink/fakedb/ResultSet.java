@@ -556,4 +556,16 @@ public class ResultSet implements java.sql.ResultSet
 	public void updateSQLXML(String arg0, SQLXML arg1) throws SQLException {}
 	public boolean isWrapperFor(Class<?> iface) throws SQLException {return false;}
 	public <T> T unwrap(Class<T> iface) throws SQLException {return null;}
+
+	@Override
+	public <T> T getObject(int arg0, Class<T> arg1) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <T> T getObject(String arg0, Class<T> arg1) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -57,8 +57,8 @@ import java.sql.*;
 
 public class MUD extends Thread implements MudHost
 {
-	private static final float    HOST_VERSION_MAJOR=(float)5.7;
-	private static final long     HOST_VERSION_MINOR=7;
+	private static final float    HOST_VERSION_MAJOR=(float)0.1;
+	private static final long     HOST_VERSION_MINOR=0;
 	
 	private final static String[] STATE_STRING={"waiting","accepting","allowing"};
 
@@ -110,7 +110,7 @@ public class MUD extends Thread implements MudHost
 			str="MUD Server did not start. Exiting.";
 			break;
 		default:
-			str="Fatal error loading classes.  Make sure you start up marblemud from the directory containing the class files.";
+			str="Fatal error loading classes.  Make sure you start up Marble from the directory containing the class files.";
 			break;
 		}
 		Log.errOut(Thread.currentThread().getName(),str);
@@ -408,7 +408,7 @@ public class MUD extends Thread implements MudHost
 		}
 		catch (Throwable th)
 		{
-			Log.errOut(Thread.currentThread().getName(),"marblemud Server initHost() failed");
+			Log.errOut(Thread.currentThread().getName(),"Marble Server initHost() failed");
 			Log.errOut(Thread.currentThread().getName(),th);
 			fatalStartupError(t,4);
 			return false;
@@ -644,7 +644,7 @@ public class MUD extends Thread implements MudHost
 				isOK = false;
 		}
 
-		Log.sysOut(Thread.currentThread().getName(),"marblemud Server cleaning up.");
+		Log.sysOut(Thread.currentThread().getName(),"Marble Server cleaning up.");
 
 		try
 		{
@@ -1331,7 +1331,7 @@ public class MUD extends Thread implements MudHost
 		new CMLib(); // initialize this threads libs
 		
 		if(iniFiles.size()==0) iniFiles.addElement("marblemud.ini");
-		if((nameID.length()==0)||(nameID.equalsIgnoreCase( "marblemud" ))||nameID.equalsIgnoreCase("Your Muds Name"))
+		if((nameID.length()==0)||(nameID.equalsIgnoreCase( "marblemud" ))||nameID.equalsIgnoreCase("MarbleMud"))
 		{
 			nameID="Unnamed_marblemud#";
 			long idNumber=new Random(System.currentTimeMillis()).nextLong();
